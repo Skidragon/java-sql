@@ -105,6 +105,11 @@ GROUP BY c.city
 
 ### delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
 
+```
+DELETE FROM Customers
+WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders)
+```
+
 ## Create Database and Table
 
 ### Keep track of the code you write and paste at the end of this document
